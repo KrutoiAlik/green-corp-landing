@@ -5,10 +5,14 @@ body {
 }
 
 header {
+    position: sticky;
+    background: white;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    z-index: 1;
 }
 
 .header__logo {
@@ -65,6 +69,9 @@ button {
 }
 
 .about button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
     font-size: 18px;
     border-radius: 20px;
     padding: 20px 25px;
@@ -76,8 +83,10 @@ button {
 }
 
 .about__sun-image {
+    position: absolute;
     width: 100px;
     height: 100px;
+    animation: rotation 10s infinite linear;
 }
 
 .form {
@@ -182,4 +191,95 @@ input, select {
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
+}
+
+@keyframes rotation {
+
+    from { 
+        transform: rotate(0); 
+    }
+
+    to { 
+        transform: rotate(360deg); 
+    }
+}
+
+@media (max-width: 720px) {
+
+    header, section, form {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .header__logo {
+        height: 20px;
+    }
+
+    section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .about h1 {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .about__image {
+        width: 280px;
+    }
+
+    .about__sun-image {
+        width: 75px;
+        height: 75px;
+    }
+
+    .footer {
+        padding: 10px;
+    }
+
+    .footer__container {
+        flex-direction: column-reverse;
+    }
+
+}
+
+@media (min-width: 720px) and (max-width: 1024px) {
+
+    section, header, form {
+        padding: 10px;
+    }
+
+    section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .about h1 {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .about__image {
+        width: 280px;
+    }
+
+    .about__sun-image {
+        height: 75px;
+        width: 75px;
+    }
+
+    .footer {
+        padding: 60px 20px;
+    }
+
+    .footer__group {
+        margin-right: 60px;
+    }
+
 }
