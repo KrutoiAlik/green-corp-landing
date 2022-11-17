@@ -89,6 +89,167 @@ button {
     animation: rotation 10s infinite linear;
 }
 
+/* Styles for Features section */
+
+.features {
+    padding: 50px;
+}
+
+.features .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+}
+
+.features .cards .card {
+    border: 1px solid #D9E4E6;
+    border-radius: 5px;
+    padding: 35px 40px 25px;
+}
+
+.features .card__logo {
+    height: 100px;
+    width: 100px;
+    font-size: 32px;
+    font-weight: 700;
+    background: #eaeff9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.features .card:first-child .card__logo {
+    color: #ffb406;
+}
+
+.features .card:nth-child(2) .card__logo {
+    color: #ad1714;
+}
+
+.features .card:last-child .card__logo {
+    color: #22a030;
+}
+
+.features .cards .card p {
+    font-size: 16px;
+    line-height: 22px;
+    opacity: 0.8;
+}
+
+.features__border {
+    margin: 50px 0;
+    border: 1px solid #E6EAF4;
+}
+
+.features__feedback {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.features__feedback div {
+    border-radius: 10px;
+}
+
+.features__feedback .features__feedback-left {
+    padding-right: 10px;
+}
+
+.features__feedback .features__feedback-left h2 {
+    font-size: 48px;
+}
+
+.features__feedback .features__feedback-left p {
+    font-size: 18px;
+    line-height: 26px;
+    opacity: 0.7;
+}
+
+.features__feedback .features__feedback-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.features__feedback .features__box {
+    padding: 30px 40px 25px;
+    color: #fff;
+    border-radius: 25px;
+    min-height: 150px;
+}
+
+.features__feedback .features__box h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 48px;
+}
+
+.features__feedback-right .features__savings-box {
+    background: #dc5e26;
+    box-shadow: 0px 6px rgb(221 95 38 / 20%);
+    margin-right: 30px;
+}
+
+.features__feedback-right .features__rate-box {
+    background: #1D263A;
+    box-shadow: 0px 6px rgb(29 38 58 / 20%);
+}
+
+.promo {
+    display: flex;
+}
+
+.promo__image {
+    flex: 1;
+    background: url('./img/promo.jpg');
+    background-size: cover;
+}
+
+.promo__right {
+    flex: 1;
+    background: #dd5f26;
+    padding: 160px 60px;
+}
+
+.promo__right .promo__card {
+    background: white;
+    padding: 30px 40px;
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 500;
+    border-radius: 25px;
+}
+
+.promo__card p {
+    opacity: 0.8;
+}
+
+.promo__card p::before {
+    content: "";
+    display: inline-block;
+    margin-right: 10px;
+    width: 10px;
+    height: 10px;
+    background: #ec6b29;
+    border-radius: 50%;
+}
+
+.promo__button {
+    background: #107b1c;
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.promo__button i {
+    font-size: 15px;
+    margin-left: 5px;
+}
+
+/* Styles for Form section */
+
 .form {
     display: flex;
     justify-content: center;
@@ -240,6 +401,51 @@ input, select {
         height: 75px;
     }
 
+    .features .cards {
+        grid-template-columns: auto;
+    }
+
+    .features__feedback {
+        grid-template-columns: auto;
+    }
+
+    .features__feedback .features__feedback-left {
+        padding-right: 0;
+    }
+    
+    .features__feedback .features__feedback-left h2 {
+        font-size: 36px;
+    }
+
+    .features__feedback .features__feedback-right {
+        flex-direction: column;
+
+    }
+
+    .features__feedback-right .features__savings-box {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .features__box h3 {
+        font-size: 36px;
+    }
+
+    .promo {
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+
+    .promo__image {
+        flex: auto;
+        width: 100%;
+        height: 500px;
+    }
+
+    .promo__right {
+        padding: 50px 10px;
+    }
+
     .footer {
         padding: 10px;
     }
@@ -273,6 +479,24 @@ input, select {
     .about__sun-image {
         height: 75px;
         width: 75px;
+    }
+
+    .features {
+        padding: 10px;
+    }
+
+    .features .cards {
+        grid-gap: 10px;
+    }
+
+    .features__feedback .features__feedback-right {
+        flex-direction: column;
+
+    }
+
+    .features__feedback-right .features__savings-box {
+        margin-right: 0;
+        margin-bottom: 30px;
     }
 
     .footer {
