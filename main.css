@@ -203,6 +203,7 @@ button {
 .promo__image {
     flex: 1;
     background: url('./img/promo.jpg');
+    background-position: center;
     background-size: cover;
 }
 
@@ -399,6 +400,10 @@ input, select {
     .about__sun-image {
         width: 75px;
         height: 75px;
+    }
+
+    .features {
+        padding: 10px;
     }
 
     .features .cards {
