@@ -43,6 +43,7 @@ button {
 }
 
 .about {
+    position: relative;
     display: flex;
     background: url("img/back.png");
     background-size: cover;
@@ -62,6 +63,14 @@ button {
     font-size: 18px;
     line-height: 30px;
     opacity: 0.8;
+}
+
+.about .orb-canvas {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .about__info {
