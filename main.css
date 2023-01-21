@@ -301,6 +301,7 @@ button {
 }
 
 .form input, .form select {
+    width: 100%;
     font-size: 18px;
     color: #213053;
     height: 60px;
