@@ -14,7 +14,7 @@
     <header>
         <img class="header__logo" src="img/logo.svg" />
         <div class="header__controls">
-            <a href="#contacts">Контакты</a>
+            <a href="#form">Контакты</a>
             <button>Заказать</button>
         </div>
     </header>
@@ -24,7 +24,7 @@
         <div class="about__info animate__animated animate__fadeInLeft">
             <h1>Солнечные панели GreenRobotic</h1>
             <p>Производите дешёвую экологически чистую электроэнергию из солнечного света</p>
-            <button><span>Узнать подробнее</span><i class="fa-solid fa-angle-right"></i></button>
+            <button href="#features" class="more-button">Узнать подробнее<i class="fa-solid fa-angle-right"></i></button>
         </div>
         <div class="about__images animate__animated animate__fadeInRight">
             <img src="img/sun.png" alt="" class="about__sun-image">
@@ -100,7 +100,7 @@
         </div>
     </section>
 
-    <section class="form">
+    <section class="form" id="form">
         <div class="form__container">
             <h1 class="form__title">Оставьте свои контакты.</h1>
             <p class="form__subtitle">
@@ -108,7 +108,7 @@
                 Выбрать удобный вариант доставки и установки.<br />
                 Гарантия возврата денег.
             </p>
-            <form id="form">
+            <form>
 
                 <div class="form__group">
                     <label for="name" class="form__label">Ваше имя</label>
@@ -160,7 +160,7 @@
             <div class="footer__group">
                 <h3>Компания:</h3>
                 <div class="footer__links">
-                    <a href="#">Контакты</a>
+                    <a href="#form">Контакты</a>
                     <a href="#">Вакансии</a>
                     <a href="#">СМИ</a>
                 </div>

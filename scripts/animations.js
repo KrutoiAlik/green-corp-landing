@@ -14,7 +14,6 @@ function increaseNumberAnimationStep(i, element, endNumber) {
 
     i = i + 100;
 
-    console.log(i);
     setTimeout(() => increaseNumberAnimationStep(i, element, endNumber), INCREASE_NUMBER_ANIMATION_SPEED);
 }
 
@@ -23,12 +22,13 @@ function initIncreaseNumberAnimation() {
     increaseNumberAnimationStep(0, clientsCount, 5000);
 }
 
-initIncreaseNumberAnimation();
+// initIncreaseNumberAnimation();
+
 
 const budget = document.getElementById('budget');
 budget.addEventListener('change', (e) => {
 
-    const form = document.getElementById('form');
+    const form = document.querySelector('#form form');
 
     if (e.target.value === 'other') {
         const formContainer = document.createElement('div');
@@ -50,3 +50,40 @@ budget.addEventListener('change', (e) => {
         }
     }
 });
+
+let isAnimationInited = false;
+
+function updateScroll() {
+    const header = document.querySelector('header');
+    if (window.scrollY > 0) {
+        header.classList.add('header__scrolled');
+    } else {
+        header.classList.remove('header__scrolled');
+    }
+
+    if (!isAnimationInited) {
+
+        const countElementPosition = document.querySelector('.features__clients-count').offsetTop;
+        const windowBottomPosition = window.scrollY + window.innerHeight;
+
+        if (windowBottomPosition >= countElementPosition) {
+            initIncreaseNumberAnimation();
+            isAnimationInited = true;
+        }
+    }
+
+}
+
+function addSmoothScroll(link) {
+    link.addEventListener('click', onLinkClick);
+}
+
+function onLinkClick(event) {
+    event.preventDefault();
+    document.querySelector(event.target.getAttribute('href'))?.scrollIntoView({
+        behavior: 'smooth'
+    });
+}
+
+window.addEventListener('scroll', updateScroll);
+document.querySelectorAll('button.more-button[href^="#"], a[href^="#"]').forEach(a => addSmoothScroll(a));
